@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/all.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="header">
+        <a href="#" class="logo">Maldives</a>
+        <div class="toggle" onclick="toggleMenu()"></div>
+
+        <nav class="menu">
+          <a href="#">Home</a>
+          <a href="#">Destination</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+          <div class="close" onclick="toggleMenu()"></div>
+        </nav>
+      </div>
+
+      <div class="content">
+        <div class="heading">
+          <h1>
+            The Happiest Place<br />
+            On the world.
+          </h1>
+        </div>
+        <button class="btn">Start Tour</button>
+      </div>
+
+      <div class="icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+
+      <div class="btns">
+        <div id="btn-1"></div>
+        <div id="btn-2"></div>
+        <div id="btn-3"></div>
+      </div>
+      <footer>
+        <p>Designed and Developed by <span>Shamsheedhopz_</span></p>
+      </footer>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $("#btn-1").click(function () {
+          $("#container").css({ transition: "0.2s" });
+          $("#container").css({ background: "url(pic-1.jpg)" });
+          $("#container").css({ "background-size": "cover" });
+          $("#container").css({ "background-position": "center" });
+        });
+      });
+
+      $(document).ready(function () {
+        $("#btn-2").click(function () {
+          $("#container").css({ transition: "0.2s" });
+          $("#container").css({ background: "url(pic-2.jpg)" });
+          $("#container").css({ "background-size": "cover" });
+          $("#container").css({ "background-position": "center" });
+        });
+      });
+
+      $(document).ready(function () {
+        $("#btn-3").click(function () {
+          $("#container").css({ transition: "0.2s" });
+          $("#container").css({ background: "url(pic-3.jpg)" });
+          $("#container").css({ "background-size": "cover" });
+          $("#container").css({ "background-position": "center" });
+        });
+      });
+
+      function toggleMenu() {
+        var menuToggle = document.querySelector(".toggle");
+        var menu = document.querySelector(".menu");
+        menuToggle.classList.toggle("active");
+        menu.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,278 @@
+@font-face {
+  font-family: Cocogoose;
+  src: url("font/Cocogoose\ Pro-trial.ttf");
+}
+@font-face {
+  font-family: Azonix;
+  src: url("font/Azonix.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Cocogoose;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: url("pic-1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.header {
+  width: 100%;
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  z-index: 2;
+}
+
+.header .logo {
+  position: relative;
+  left: 75px;
+  font-family: Azonix;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+}
+
+.header a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.header nav a {
+  position: relative;
+  right: 50px;
+  font-size: 1.2em;
+  margin-left: 30px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 196px;
+}
+
+.heading {
+  width: 452px;
+  height: 150px;
+  background: #fff;
+  position: relative;
+  left: 75px;
+  padding: 30px;
+  letter-spacing: 1px;
+}
+
+.content button {
+  z-index: 1;
+  width: 150px;
+  height: 49px;
+  background: #e91e63;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  position: relative;
+  top: 77px;
+  left: -89px;
+  font-family: Azonix;
+  font-size: 14px;
+  transition: 0.5s;
+}
+
+.content button:hover {
+  border: double;
+  border-color: #fff;
+  transform: scale(1.1);
+}
+
+.icons {
+  position: absolute;
+  right: 0;
+  top: 248px;
+  display: flex;
+  flex-direction: column;
+}
+
+.icons a {
+  text-decoration: none;
+  background: #fff;
+  width: 50px;
+  height: 60px;
+  text-align: center;
+  margin-bottom: 5px;
+  padding: 13px 0;
+  transition: 0.5s;
+}
+
+.icons a i {
+  color: black;
+  font-size: 32px;
+  transition: 0.5s;
+}
+
+.icons a:hover {
+  background: none;
+}
+.icons a:hover i {
+  color: black;
+  transform: scale(1.1) rotate(360deg);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 500px;
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+
+footer p span {
+  color: #fff;
+}
+
+.btns {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  left: 616px;
+  top: 346px;
+  width: 150px;
+}
+
+#btn-1,
+#btn-2,
+#btn-3 {
+  background: url(btn.png);
+  width: 46px;
+  height: 30px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+#btn-1:hover,
+#btn-2:hover,
+#btn-3:hover {
+  transform: scale(1.1) rotate(360deg);
+}
+
+/* responsive */
+
+@media (max-width: 991px) {
+  .header nav {
+    position: absolute;
+    left: -500px;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    background: #e91e63;
+    width: 500px;
+    height: 1240px;
+    text-align: center;
+    transition: 0.5s;
+    z-index: 3;
+  }
+
+  .toggle {
+    width: 40px;
+    height: 40px;
+    background: url(toggle.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    cursor: pointer;
+    position: relative;
+    right: 53px;
+  }
+
+  .menu.active {
+    left: 0;
+  }
+
+  .close {
+    width: 40px;
+    height: 40px;
+    background: url(close.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    cursor: pointer;
+    position: relative;
+    top: 598px;
+    left: 246px;
+    transition: 0.5s;
+  }
+
+  .close:hover {
+    filter: invert(1);
+    transform: scale(1.2) rotateX(360deg);
+  }
+
+  .header nav a {
+    position: relative;
+    font-size: 51px;
+    left: 59px;
+    top: 608px;
+    color: #fff;
+    line-height: 137px;
+    width: 324px;
+    transition: 0.5s;
+  }
+
+  .header nav a:hover {
+    color: black;
+    transform: scale(1.2) rotateX(360deg);
+  }
+
+  .content {
+    position: relative;
+    top: 119px;
+  }
+
+  .heading {
+    left: 64px;
+    height: 130px;
+  }
+
+  .heading h1 {
+    font-size: 26px;
+  }
+
+  .content button {
+    top: 63px;
+    left: -67px;
+    font-size: 12px;
+  }
+
+  .btns {
+    left: 187px;
+    top: 219px;
+  }
+
+  .icons {
+    position: absolute;
+    right: 146px;
+    top: 515px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .icons a {
+    margin-right: 10px;
+    border-radius: 8px;
+  }
+
+  footer {
+    position: absolute;
+    left: 109px;
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+}
